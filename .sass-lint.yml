@@ -1,0 +1,12 @@
+options:
+  merge-default-rules: false
+  formatter: stylish
+files:
+  include: '**/*.s+(a|c)ss'
+  ignore:
+    - 'node_modules/**/*.*'
+rules:
+  # Disallows
+  property-sort-order: 0
+  clean-import-paths: 0
+  leading-zero: 0

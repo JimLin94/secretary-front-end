@@ -1,0 +1,22 @@
+@import '~sass/global.scss';
+
+.btn {
+  margin-bottom: 1em;
+  padding: 10px 24px;
+  font-size: 16px;
+  box-shadow: none;
+  text-decoration: none;
+  border-radius: 100px;
+  transition: all .3s ease-in-out;
+
+  &.red {
+    color: #fff;
+    background: #ff5959;
+  }
+
+  &.white {
+    color: #fff;
+    border: solid 1px #fff;
+    background: 0 0;
+  }
+}

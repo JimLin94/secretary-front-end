@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist/",
+        "sourceMap": true,
+        "noImplicitAny": true,
+        "module": "commonjs",
+        "esModuleInterop": true,
+        "target": "es6",
+        "jsx": "react",
+        "baseUrl": "./src",
+        "paths": {
+          "containers/*": ["containers/*"],
+          "components/*": ["components/*"],
+          "constants/*": ["constants/*"],
+          "utils/*": ["utils/*"],
+          "sass/*": ["sass/*"]
+        }
+    },
+    "exclude": [
+      "dist"
+    ]
+}

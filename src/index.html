@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+        <link rel="apple-touch-icon" sizes="180x180" href="/public/apple-touch-icon.png">
+        <link rel="icon" href="/public/favicon.ico">
+        <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png">
+        <link rel="manifest" href="/public/manifest.json">
+        <meta name="theme-color" content="#4a63e7">
+        <title><%= htmlWebpackPlugin.options.title %></title>
+        <meta property="og:title" content="<%= htmlWebpackPlugin.options.title %>">
+        <meta property="og:description" content="<%= htmlWebpackPlugin.options.meta.description %>">
+        <meta property="og:image" content="<%= htmlWebpackPlugin.options.image %>">
+        <meta property="og:url" content="<%= htmlWebpackPlugin.options.siteUrl %>">
+        <meta property="og:type" content="<%= htmlWebpackPlugin.options.type %>">
+        <meta property="og:locale" content="<%= htmlWebpackPlugin.options.locale %>">
+        <meta property="og:author" content="<%= htmlWebpackPlugin.options.author %>">
+        <meta property="og:site_name" content="<%= htmlWebpackPlugin.options.siteName %>">
+        <meta name="google-site-verification" content="QEjYQ1dUKuAz4xLxv2Inoux_4A48HXbjvisFoAdYaV0" />
+        <link rel="stylesheet" href="/public/normalize.css" />
+        <noscript>
+          <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+        </noscript>
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-K73F63P');</script>
+        <!-- End Google Tag Manager -->        
+    </head>
+    <body>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K73F63P"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->    
+        <noscript>
+          <div id="noscript">
+            <div class="noscript">
+              <div class="noscript-body">
+                <h1>Oops! Can't Run Javascript</h1>
+              </div>
+              <h2>Oops, Please Enable Javascript on This Browser And Refresh the Page.</h2>
+            </div>
+          </div>        
+        </noscript>
+        <div id="app" />
+    </body>
+</html>

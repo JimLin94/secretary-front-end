@@ -1,0 +1,348 @@
+@import '~sass/global.scss';
+
+h1,
+h2,
+h3,
+p,
+span {
+  line-height: 1.5em;
+  letter-spacing: 1px;
+}
+
+// * {
+//   -webkit-overflow-scrolling: touch;
+// }
+
+button {
+  border: 0px;
+}
+
+img {
+  max-width: 100%;
+}
+
+hr {
+  width: 100%;
+  margin: 1.5em 0;
+}
+
+ul {
+  list-style-type: decimal;
+
+  li {
+    margin-bottom: 1em;
+  }
+}
+
+a {
+  color: #4a63e7;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+a, button {
+  outline: none;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.margin-bottom-lg {
+  margin-bottom: 50px;
+}
+
+.margin-s {
+  margin: 5px 0;
+}
+
+label {
+  color: $g-777;
+
+  &+span {
+    color: #000;
+  }
+}
+
+html {
+  font-size: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  @include respond-to(medium-screens) {
+    font-size: 16px;
+  }
+}
+
+body, html {
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  &::after {
+    content: "";
+    background-color:
+      $second-theme;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 5px;
+    height: 6px;
+    width: 6px;
+  }
+}
+
+.tall {
+  min-height: $tall-height;
+}
+
+#app {
+  display: flex;
+  justify-content: center;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 1em;
+  padding: 25px 15px;
+
+  @include respond-to(medium-screens) {
+    flex-direction: row-reverse;
+    padding: 50px 15px;
+  }
+
+  .profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    h2 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 700;
+    }
+  }
+
+  .main {
+    transition: all .3s ease-in-out;
+    z-index: 1;
+
+    &.offset-right {
+      transform: translateX(280px);
+    }
+
+    @include respond-to(medium-screens) {
+      max-width: calc(100% - 330px);
+    }
+
+    .m-header {
+      display: none;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      padding: .5em 1em;
+      background-color: $main-theme;
+      border-radius: 20px;
+      color: #fff;
+
+      @include respond-to(medium-screens) {
+        display: none;
+      }
+
+      button {
+        cursor: pointer;
+        background: 0 0;
+        border: 0;
+        outline: none;
+        vertical-align: middle;
+        padding: 0;
+
+        >span {
+          background:
+            #fff;
+          border-radius: 10px;
+          display: block;
+          height: 4px;
+          width: 25px;
+
+          &:nth-child(2) {
+            margin-top: 4px;
+            margin-bottom: 4px;
+          }
+        }
+      }
+    }
+  }
+
+  .content-cover {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+
+    &.mDisplay {
+      display: block;
+    }
+  }
+
+  .header-wrapper {
+    position: fixed;
+    top: 0;
+    left: 15px;
+    width: 265px;
+    transform: translateX(-200%);
+    transition: all .3s ease-in-out;
+    z-index: 10;
+
+    &.mDisplay {
+      transform: translateX(0);
+    }
+
+    @include respond-to(medium-screens) {
+      position: relative;
+      width: 300px;
+      margin: 0 50px 50px 0;
+      transform: none;
+    }
+
+    .header {
+      position: fixed;
+      width: 265px;
+      height: $tall-height;
+      margin: 25px 0;
+      padding: 30px;
+      border-radius: 20px;
+      color: #fff;
+      background-color: $main-theme;
+      transition: all .3s ease-in-out;
+
+      @include respond-to(medium-screens) {
+        width: 300px;
+        margin: 0 50px 50px 0;
+      }
+
+      .close {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 25px;
+        right: 20px;
+        z-index: 5;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 20px;
+          height: 3px;
+          border-radius: 20px;
+          background-color: #fff;
+          transform: rotate(45deg);
+          z-index: 6;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 20px;
+          height: 3px;
+          border-radius: 20px;
+          background-color: #fff;
+          transform: rotate(135deg);
+          z-index: 6;
+        }
+
+        @include respond-to(medium-screens) {
+          display: none;
+        }
+      }
+
+      .profile {
+        flex-direction: column;
+        align-items: flex-start;
+
+        >h2 {
+          margin-top: 1em;
+        }
+      }
+
+      nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        a, span {
+          position: relative;
+          margin: 1em;
+          transition: all .3s ease-in-out;
+          color: #fff;
+
+          &.active {
+            &::before {
+              content: '';
+              position: absolute;
+              left: -1em;
+              top: 0;
+              bottom: 0;
+              width: 1.5px;
+              background-color: $second-theme;
+            }
+          }
+
+          @include respond-to(medium-screens) {
+            &:hover {
+              color: $second-theme;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .center-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+
+    @include respond-to(medium-screens) {
+      width: 70%;
+      margin: 0 auto;
+
+      h2 {
+        font-size: 4em;
+      }
+    }
+  }
+
+  .icons {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+
+    >* {
+      margin-bottom: 30px;
+    }
+  }
+
+  .desc {
+    display: flex;
+    flex-direction: column;
+
+    @include respond-to(medium-screens) {
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+  }
+}

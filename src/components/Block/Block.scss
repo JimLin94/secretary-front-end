@@ -1,0 +1,32 @@
+@import '~sass/global.scss';
+
+.block {
+  margin-bottom: 50px;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 6px 15px 0px rgba(74, 99, 231, .2);
+
+  &.blue {  
+    background-color: $main-theme;
+    color: #fff;
+  }
+
+  &.white {
+    background-color: #fff;
+    color: #777;
+  }
+
+  h2 {
+    font-size: 24px;
+
+    &::after {
+      content: "";
+      background: #ff5959;
+      border-radius: 25px;
+      display: block;
+      height: 5px;
+      margin-top: 14px;
+      width: 30px;
+    }
+  }
+}
